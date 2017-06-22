@@ -4,6 +4,10 @@ La idea es hacer una pequeña aplicación que consuma un API nuestro y que muest
 
 Se pueden utilizar las librerías externas que se consideren oportunas, no hay ninguna limitación en este sentido. 
 
+La url a usar es la siguiente:
+
+`https://s3-eu-west-1.amazonaws.com/developers-tests/commerces.json`
+
 Se valorará la organización, las librerías usadas y técnicas empleadas (inyección de dependencias, gestión de tareas en segundo plano...).
 
 Necesitaremos el proyecto con todo el código para poder probarlo.
