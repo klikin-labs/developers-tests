@@ -1,4 +1,4 @@
-#Descripción de la prueba
+##Descripción de la prueba
 
 La idea es hacer una pequeña aplicación que consuma un API nuestro y que muestre un listado de comercios. Al pulsar en cualquiera de ellos, la aplicación debería mostrar una ficha con la información más relevante del mismo. Se deja a tu elección qué información del comercio mostrar y cómo hacerlo.
 
