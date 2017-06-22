@@ -1,0 +1,46 @@
+{
+
+  "mongo": {
+    "uri": "mongodb://ds129352.mlab.com:29352/developers-tests",
+    "options": {
+      "user": "klikin",
+      "pass": "devtests"
+    }
+  },
+
+  "middleware": {
+    "router": {
+      "module": {
+        "arguments": [{ "directory": "path:./controllers" }]
+      }
+    },
+
+    "favicon": {
+      "enabled": false
+    },
+
+    "static": {
+      "enabled": false
+    },
+
+    "urlencoded": {
+      "enabled": false
+    },
+
+    "multipart": {
+      "enabled": false
+    },
+
+    "cookieParser": {
+      "enabled": false
+    },
+
+    "session": {
+      "enabled": false
+    },
+
+    "appsec": {
+      "enabled": false
+    }
+  }
+}
