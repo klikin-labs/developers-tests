@@ -1,29 +1,39 @@
 {
   "name": "developers-tests-backend",
   "version": "0.0.1",
-  "description": "Klikin Backend developers tests",
+  "description": "Klikin node.js developers tests",
   "main": "index.js",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha"
+    "start": "babel-node src/index.js",
+    "test": "NODE_ENV=test mocha"
   },
   "dependencies": {
-    "bluebird": "3.5.0",
-    "express": "4.15.3",
-    "kraken-js": "2.1.0",
-    "lodash": "4.17.4",
-    "mongoose": "4.10.8"
+    "@babel/runtime": "7.10.2",
+    "@godaddy/terminus": "4.4.1",
+    "bluebird": "3.7.2",
+    "express": "4.17.1",
+    "kraken-js": "2.3.0",
+    "lodash": "4.17.19",
+    "mongoose": "5.9.25"
   },
   "devDependencies": {
-    "chai": "4.0.2",
-    "chai-as-promised": "7.0.0",
-    "eslint": "4.0.0",
-    "mocha": "3.4.2",
-    "sinon": "2.3.5",
-    "sinon-chai": "2.11.0",
-    "supertest": "3.0.0"
+    "@babel/cli": "7.10.1",
+    "@babel/core": "7.10.2",
+    "@babel/node": "7.10.1",
+    "@babel/plugin-transform-runtime": "7.10.1",
+    "@babel/preset-env": "7.10.2",
+    "@babel/register": "7.10.1",
+    "babel-eslint": "10.1.0",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "eslint": "7.5.0",
+    "mocha": "8.0.1",
+    "sinon": "9.0.2",
+    "sinon-chai": "3.5.0",
+    "supertest": "4.0.2"
   },
   "repository": {
     "type": "git",

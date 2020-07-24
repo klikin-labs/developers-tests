@@ -1,0 +1,17 @@
+{
+
+  "mongo": {
+    "uri": "mongodb://localhost:27017/developers-tests"
+  },
+
+  "middleware": {
+    "test-router": {
+      "enabled": true,
+      "priority": 119,
+      "module": {
+        "name": "express-enrouten",
+        "arguments": [{ "directory": "path:../test/controllers" }]
+      }
+    }
+  }
+}

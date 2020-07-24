@@ -1,8 +1,4 @@
-'use strict'
-
-const Commerce = require('../models/commerce')
-
-module.exports = (router) => {
+export default function(router) {
   router.get('/', findSearch)
 }
 

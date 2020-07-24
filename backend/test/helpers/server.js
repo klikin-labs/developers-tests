@@ -1,32 +1,30 @@
-'use strict'
+import path     from 'path'
+import http     from 'http'
+import Promise  from 'bluebird'
+import express  from 'express'
+import kraken   from 'kraken-js'
+import config   from '../../src/lib/config'
 
-const Promise   = require('bluebird')
-const kraken    = require('kraken-js')
-const express   = require('express')
-const config    = require('../../lib/config')()
-const database  = require('../../lib/database')
 
-function serverStartup(done) {
-  let app = express()
-  app.on('start', () => {
-    done()
-  })
+async function start() {
+  const app     = express()
+  const server  = http.createServer(app)
+
   app.use(kraken({
-    basedir: process.cwd(),
-    onconfig: config.onconfig
+    basedir: path.join(__dirname, '..', '..', 'src'),
+    onconfig: config.start(server).onconfig,
   }))
 
-  return app.listen(1337)
+  const running = Promise.fromCallback(done => app.on('start', done))
+  global.APP    = server.listen(1337)
+
+  await running
 }
 
-function serverShutdown(app, done) {
-  let serverClose = Promise.promisify(app.close, {context: app})
-
-  Promise.resolve()
-    .then(() => serverClose())
-    .then(() => database.shutdown())
-    .then(() => done())
+async function stop() {
+  await Promise.fromCallback((done) => global.APP.close(done))
+  await config.stop()
+  global.APP = null
 }
 
-exports.startup   = serverStartup
-exports.shutdown  = serverShutdown
+export default {start, stop}

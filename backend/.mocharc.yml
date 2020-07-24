@@ -1,0 +1,9 @@
+async-only: true
+check-leaks: true
+global:
+  - APP
+recursive: true
+reporter: spec
+require: '@babel/register'
+timeout: 5000
+ui: bdd
