@@ -17,7 +17,7 @@
     "express": "4.17.1",
     "kraken-js": "2.3.0",
     "lodash": "4.17.19",
-    "mongoose": "5.9.25"
+    "mongoose": "5.13.20"
   },
   "devDependencies": {
     "@babel/cli": "7.10.1",
