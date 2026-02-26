@@ -25,7 +25,7 @@ Response HTTP 200
 ```
 
 Nuestra API soportorá al menos las siguientes peticiones:
-+ `GET /?latitude&longitude&category` que devuelva los comercios hasta 100km de las coordenadas dadas
++ `GET /nearby?latitude&longitude&category` que devuelva los comercios hasta 100km de las coordenadas dadas
 ordenados por distancia creciente. La categoría es un parámetro opcional.
 + `GET /:id` donde además de los datos persistidos en nuestra BD, queremos que el resultado
 incluya la puntuación del comercio en FoodStars.
@@ -56,7 +56,7 @@ brevemente qué indices de MongoDB serían adecuados para soportar ambas queries
 
 ## Observaciones
 
-Eres libre de utilizar las librerías que creas necesarias.
+Eres libre de elegir entre JS y TS y de utilizar los frameworks y las librerías que creas necesarias.
 
 Si consideras que algo merece una explicación detallada, no dejes de contarnos por qué has tomado esas decisiones.
 
